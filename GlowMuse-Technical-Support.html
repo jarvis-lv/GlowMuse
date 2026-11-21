@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowMuse 技术支持</title>
+  <meta name="description" content="GlowMuse 智能自拍补光相机技术支持页面，提供常见问题、使用指南与联系方式。" />
+  <style>
+    :root {
+      --bg: #0b0714;
+      --bg-soft: #161026;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-border: rgba(178, 132, 255, 0.28);
+      --text: #f4f0ff;
+      --muted: #bdb2d6;
+      --purple: #cdabff;
+      --cyan: #8df5ea;
+      --pink: #ff9ed2;
+      --accent: linear-gradient(135deg, #8df5ea 0%, #cdabff 55%, #ff9ed2 100%);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 12%, rgba(141, 245, 234, 0.18), transparent 28%),
+        radial-gradient(circle at 82% 18%, rgba(205, 171, 255, 0.22), transparent 32%),
+        radial-gradient(circle at 50% 92%, rgba(255, 158, 210, 0.16), transparent 30%),
+        var(--bg);
+      line-height: 1.7;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--purple);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      margin: 22px 0 12px;
+      font-size: clamp(30px, 5vw, 44px);
+      line-height: 1.2;
+      background: var(--accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .section {
+      margin-top: 34px;
+      padding: 26px;
+      border: 1px solid var(--card-border);
+      border-radius: 22px;
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 22px;
+      color: var(--text);
+    }
+
+    .faq details {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .faq details:last-child { border-bottom: none; }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--cyan);
+      list-style: none;
+      position: relative;
+      padding-right: 28px;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: var(--purple);
+      font-size: 22px;
+      line-height: 1.3;
+    }
+
+    details[open] summary::after { content: "−"; }
+
+    details p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: var(--purple);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-item strong { color: var(--cyan); }
+    .contact-item span { color: var(--muted); }
+
+    .note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--purple);
+      background: rgba(205, 171, 255, 0.08);
+      color: var(--muted);
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 42px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 720px) {
+      .wrap { padding: 32px 18px 48px; }
+      .cards { grid-template-columns: 1fr; }
+      .contact-item { flex-direction: column; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="brand">✨ GlowMuse 技术支持</div>
+      <h1>让每一次自拍都拥有通透光影</h1>
+      <p class="subtitle">
+        这里提供 GlowMuse 常见问题解答、使用指南与联系方式。如果您在使用补光、弹幕特效或亮度调节时遇到问题，可先查看以下说明。
+      </p>
+    </header>
+
+    <section class="section">
+      <h2>📖 功能说明</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>实时柔光补光</h3>
+          <p>通过屏幕柔光亮化面部，优化暗光自拍与人像拍摄效果。</p>
+        </div>
+        <div class="card">
+          <h3>弹幕氛围文字</h3>
+          <p>为照片和预览画面添加流动霓虹弹幕，打造个性化自拍风格。</p>
+        </div>
+        <div class="card">
+          <h3>滑动调节光影</h3>
+          <p>左右滑动切换背景色调，上下滑动调整补光亮度，实时预览效果。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <h2>❓ 常见问题</h2>
+
+      <details open>
+        <summary>补光亮度不够明显怎么办？</summary>
+        <p>请在拍摄页面上下滑动提高亮度，确认环境光线不要过强，并尽量让手机屏幕靠近面部。若系统开启了深色模式或低亮度限制，可适当调高设备屏幕亮度。</p>
+      </details>
+
+      <details>
+        <summary>为什么画面颜色偏深或肤色不够通透？</summary>
+        <p>可以尝试切换其他背景光色，降低或提高补光强度。不同光色会影响肤色表现，建议在自然光与暗光环境下分别预览，选择最适合的色调。</p>
+      </details>
+
+      <details>
+        <summary>弹幕文字不显示或位置异常？</summary>
+        <p>请确认弹幕文案不为空，并检查是否开启了弹幕特效。若仍异常，可退出页面后重新进入，或更新到最新版本 App。</p>
+      </details>
+
+      <details>
+        <summary>如何保存拍摄后的照片？</summary>
+        <p>完成拍摄后，在预览页面点击保存按钮，图片会保存到系统相册。请确认已允许 App 访问相册权限。</p>
+      </details>
+
+      <details>
+        <summary>遇到闪退、卡顿或功能不可用怎么办？</summary>
+        <p>请先重启 App、更新系统与 App 至最新版本。若问题持续，可通过下方联系方式反馈，并提供机型、系统版本、问题发生步骤与截图。</p>
+      </details>
+    </section>
+
+    <section class="section">
+      <h2>📮 联系支持</h2>
+      <div class="contact">
+        <div class="contact-item">
+          <strong>支持邮箱</strong>
+          <span>Eren20150624@163.com</span>
+        </div>
+        <div class="contact-item">
+          <strong>回复时间</strong>
+          <span>工作日 1–3 个工作日内回复</span>
+        </div>
+        <div class="contact-item">
+          <strong>反馈建议</strong>
+          <span>请在邮件中注明 App 版本、手机型号、系统版本及具体问题描述。</span>
+        </div>
+      </div>
+      <div class="note">
+        提示：App Store Connect 中的“技术支持网址”可直接填写本页面公开访问地址。上线前请将邮箱替换为您的真实联系邮箱。
+      </div>
+    </section>
+
+    <footer>
+      © 2026 GlowMuse. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
